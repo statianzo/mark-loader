@@ -1,0 +1,12 @@
+{
+  "name": "@statianzo/mark-loader",
+  "version": "0.1.0",
+  "description": "Wrap modules with performance.mark and performance.measure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "statianzo",
+  "license": "ISC"
+}
