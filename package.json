@@ -1,6 +1,6 @@
 {
   "name": "@statianzo/mark-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wrap modules with performance.mark and performance.measure",
   "main": "index.js",
   "scripts": {
