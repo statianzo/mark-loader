@@ -9,10 +9,10 @@ const endMark = (markName) => (
 );
 
 const measure = (markName) => (
-  `;global.performance && global.performance.measure && global.performance.measure('${markName}_init', '${markName}_start', '${markName}_end');`
+  `;global.performance && global.performance.measure && global.performance.measure('${markName}', '${markName}_start', '${markName}_end');`
 );
 
-const markLoader = function (content) {
+const markLoader = (content) => {
   const context = this._compiler.context || process.cwd();
   const resourcePath = this.resourcePath;
   const markName = path.relative(context, resourcePath).replace(/[^a-zA-Z0-9]/g, '_');
