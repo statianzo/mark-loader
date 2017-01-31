@@ -1,12 +1,16 @@
 {
   "name": "mark-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Inspect module load time with performance.measure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["webpack", "loader", "performance"],
+  "keywords": [
+    "webpack",
+    "loader",
+    "performance"
+  ],
   "author": "statianzo",
   "license": "ISC"
 }
