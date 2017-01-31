@@ -1,12 +1,12 @@
 {
-  "name": "@statianzo/mark-loader",
+  "name": "mark-loader",
   "version": "0.1.1",
-  "description": "Wrap modules with performance.mark and performance.measure",
+  "description": "Inspect module load time with performance.measure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["webpack", "loader", "performance"],
   "author": "statianzo",
   "license": "ISC"
 }
