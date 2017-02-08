@@ -13,7 +13,7 @@ const measure = (markName) => (
 );
 
 const markLoader = (content) => {
-  const context = this._compiler.context || process.cwd();
+  const context = this._compiler && this._compiler.context || process.cwd();
   const resourcePath = this.resourcePath;
   const markName = path.relative(context, resourcePath).replace(/[^a-zA-Z0-9]/g, '_');
 
