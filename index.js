@@ -12,8 +12,8 @@ const measure = (markName) => (
   `;global.performance && global.performance.measure && global.performance.measure('${markName}', '${markName}_start', '${markName}_end');`
 );
 
-const markLoader = (content) => {
-  const context = this._compiler && this._compiler.context || process.cwd();
+const markLoader = function markLoader(content) {
+  const context = this._compiler && this._compiler.context || process.cwd() || '';
   const resourcePath = this.resourcePath;
   const markName = path.relative(context, resourcePath).replace(/[^a-zA-Z0-9]/g, '_');
 
