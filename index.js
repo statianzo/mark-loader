@@ -1,15 +1,19 @@
 const path = require('path');
 
+const markLoaderGlobal = (markName) => (
+  `; var __markLoaderGlobal = global || window || {}; `
+);
+
 const startMark = (markName) => (
-  `;global.performance && global.performance.mark && global.performance.mark('${markName}_start');`
+  `;__markLoaderGlobal.performance && __markLoaderGlobal.performance.mark && __markLoaderGlobal.performance.mark('${markName}_start'); `
 );
 
 const endMark = (markName) => (
-  `;global.performance && global.performance.mark && global.performance.mark('${markName}_end');`
+  `;__markLoaderGlobal.performance && __markLoaderGlobal.performance.mark && __markLoaderGlobal.performance.mark('${markName}_end'); `
 );
 
 const measure = (markName) => (
-  `;global.performance && global.performance.measure && global.performance.measure('${markName}', '${markName}_start', '${markName}_end');`
+  `;__markLoaderGlobal.performance && __markLoaderGlobal.performance.measure && __markLoaderGlobal.performance.measure('${markName}', '${markName}_start', '${markName}_end'); `
 );
 
 const markLoader = function markLoader(content) {
@@ -18,6 +22,7 @@ const markLoader = function markLoader(content) {
   const markName = path.relative(context, resourcePath).replace(/[^a-zA-Z0-9]/g, '_');
 
   return [
+    markLoaderGlobal(),
     startMark(markName),
     content,
     endMark(markName),
