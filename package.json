@@ -1,6 +1,6 @@
 {
   "name": "mark-loader",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Inspect module load time with performance.measure",
   "main": "index.js",
   "scripts": {
