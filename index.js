@@ -1,7 +1,7 @@
 const path = require('path');
 
 const markLoaderGlobal = (markName) => (
-  `; var __markLoaderGlobal = global || window || {}; `
+  `; var __markLoaderGlobal = typeof global === 'object' ? global : window;`
 );
 
 const startMark = (markName) => (
